@@ -24,7 +24,7 @@ public class MakeChange {
 			System.out.print("Enter the amount paid: ");
 			paid = input.nextFloat();
 			
-			// Convert from float to integer. + 0.001 allows for inaccuracies in float variable to avoid truncating a penny
+			// Convert from float to integer. + 0.001 allow for inaccuracies in float variable to avoid truncating a penny
 			changeNeeded = (int)(((paid - price)+.001)*100);
 			
 			System.out.printf("\nAmount Due: $%.2f | Amount Tendered: $%.2f\n\n    Change Due\n------------------\n" , price, paid);
@@ -79,7 +79,6 @@ public class MakeChange {
 	
 	
 	// Method to determine number of bills or coins needed by denomination value passed from main.
-	// First IF statement is specific to pennies to make sure stray pennies are not forgotten about due to inaccuracies associated with float or double
 	public static String getChange(int changeNeeded, int denomination) {
 		
 		int billCoinQty = changeNeeded / denomination;
